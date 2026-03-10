@@ -6,17 +6,23 @@
 <title>Cabin 12 — Food & Drink</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --black: #0d0b08;
-    --dark: #1a1510;
-    --bark: #2c2016;
-    --amber: #c17f3a;
-    --gold: #e8a84a;
-    --cream: #f0e8d8;
-    --fog: #8a7a64;
-    --pine: #2d4a2d;
-    --snow: #faf7f2;
+<style>  :root {
+    /* ── Pulled directly from the Cabin 12 logo ── */
+    --bg:         #f7ebdb;   /* outer logo background — warm sandy parchment */
+    --bg2:        #f1e5d5;   /* slightly deeper parchment */
+    --bg3:        #e4d9c7;   /* grape/shadow tone — deeper section bg */
+    --barrel:     #6b482a;   /* barrel wood mid-tone */
+    --barrel-dk:  #634125;   /* barrel hoop/dark wood */
+    --barrel-lt:  #b9a081;   /* barrel highlight / text warm */
+    --barrel-hi:  #f5debe;   /* barrel pale highlight */
+    --vine:       #33261e;   /* deep vine/leaf dark */
+    --vine-mid:   #6f6349;   /* vine mid-tone */
+    --text:       #33261e;   /* main text — deep vine dark */
+    --text-mid:   #634125;   /* secondary text — barrel dark */
+    --text-light: #b9a081;   /* tertiary text — barrel light */
+    --accent:     #724524;   /* barrel shadow accent */
+    --cream:      #fef8f0;   /* near white cream */
+    --gold:       #b9a081;   /* warm golden text */
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,7 +30,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--parchment);
+    background: var(--bg);
     color: var(--black);
     font-family: 'Libre Baskerville', Georgia, serif;
     overflow-x: hidden;
@@ -59,7 +65,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 1.1rem;
     letter-spacing: 0.3em;
-    color: var(--gold);
+    color: var(--barrel-lt);
     text-transform: uppercase;
     text-decoration: none;
   }
@@ -75,13 +81,13 @@
     font-size: 0.75rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--bark);
+    color: var(--text);
     text-decoration: none;
     opacity: 0.85;
     transition: opacity 0.2s, color 0.2s;
   }
 
-  .nav-links a:hover { opacity: 1; color: var(--wine); }
+  .nav-links a:hover { opacity: 1; color: var(--barrel-dk); }
 
   /* ── HERO ── */
   .hero {
@@ -154,7 +160,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    color: var(--vine);
+    color: var(--barrel-dk);
     margin-bottom: 1.5rem;
     animation: fadeUp 1.4s 0.2s ease both;
   }
@@ -179,14 +185,14 @@
     font-weight: 900;
     line-height: 0.9;
     letter-spacing: -0.02em;
-    color: var(--bark);
+    color: var(--text);
     text-shadow: 0 2px 20px rgba(74,30,8,0.15);
     animation: fadeUp 1.4s 0.3s ease both;
   }
 
   .hero-title em {
     font-style: italic;
-    color: var(--gold);
+    color: var(--barrel-lt);
   }
 
   .hero-subtitle {
@@ -219,12 +225,12 @@
   }
 
   .btn-primary {
-    background: var(--wine);
+    background: var(--barrel-dk);
     color: var(--black);
   }
 
   .btn-primary:hover {
-    background: var(--gold);
+    background: var(--barrel-lt);
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(193,127,58,0.3);
   }
@@ -236,8 +242,8 @@
   }
 
   .btn-outline:hover {
-    border-color: var(--gold);
-    color: var(--gold);
+    border-color: var(--barrel-lt);
+    color: var(--barrel-lt);
     transform: translateY(-2px);
   }
 
@@ -264,7 +270,7 @@
   .scroll-line {
     width: 1px;
     height: 40px;
-    background: linear-gradient(to bottom, var(--wood), transparent);
+    background: linear-gradient(to bottom, var(--barrel), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
   }
 
@@ -290,7 +296,7 @@
   }
 
   .divider-icon {
-    color: var(--vine);
+    color: var(--barrel-dk);
     font-size: 1.2rem;
   }
 
@@ -311,16 +317,16 @@
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: var(--bark);
+    color: var(--text);
   }
 
   .about-text h2 em {
     font-style: italic;
-    color: var(--gold);
+    color: var(--barrel-lt);
   }
 
   .about-text p {
-    color: var(--fog);
+    color: var(--text-light);
     line-height: 1.85;
     font-size: 1rem;
     margin-bottom: 1.2rem;
@@ -331,7 +337,7 @@
   }
 
   .about-card {
-    background: var(--parchment);
+    background: var(--bg);
     border: 1px solid rgba(193,127,58,0.2);
     padding: 3rem;
     position: relative;
@@ -361,7 +367,7 @@
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 2.8rem;
     font-weight: 900;
-    color: var(--gold);
+    color: var(--barrel-lt);
     line-height: 1;
     display: block;
   }
@@ -371,14 +377,14 @@
     font-size: 0.65rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--fog);
+    color: var(--text-light);
     margin-top: 0.4rem;
     display: block;
   }
 
   /* ── MENU SECTION ── */
   .menu-section {
-    background: var(--dark);
+    background: var(--bg2);
     padding: 7rem 3rem;
     border-top: 1px solid rgba(193,127,58,0.1);
     border-bottom: 1px solid rgba(193,127,58,0.1);
@@ -394,7 +400,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    color: var(--vine);
+    color: var(--barrel-dk);
     margin-bottom: 1rem;
     display: block;
   }
@@ -403,7 +409,7 @@
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 700;
-    color: var(--bark);
+    color: var(--text);
   }
 
   .menu-tabs {
@@ -419,7 +425,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--fog);
+    color: var(--text-light);
     background: none;
     border: none;
     padding: 1rem 2rem;
@@ -434,12 +440,12 @@
     bottom: -1px;
     left: 0; right: 0;
     height: 2px;
-    background: var(--wine);
+    background: var(--barrel-dk);
     transform: scaleX(0);
     transition: transform 0.25s;
   }
 
-  .tab-btn.active { color: var(--wine); }
+  .tab-btn.active { color: var(--barrel-dk); }
   .tab-btn.active::after { transform: scaleX(1); }
   .tab-btn:hover { color: var(--cream); }
 
@@ -477,7 +483,7 @@
 
   .menu-item-desc {
     font-size: 0.78rem;
-    color: var(--fog);
+    color: var(--text-light);
     font-style: italic;
   }
 
@@ -485,7 +491,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 0.9rem;
     letter-spacing: 0.05em;
-    color: var(--wine);
+    color: var(--barrel-dk);
     white-space: nowrap;
   }
 
@@ -504,7 +510,7 @@
   }
 
   .event-card {
-    background: var(--parchment);
+    background: var(--bg);
     border: 1px solid rgba(193,127,58,0.15);
     padding: 2.5rem;
     position: relative;
@@ -531,7 +537,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: var(--vine);
+    color: var(--barrel-dk);
     margin-bottom: 1rem;
   }
 
@@ -539,14 +545,14 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--bark);
+    color: var(--text);
     margin-bottom: 0.8rem;
     line-height: 1.2;
   }
 
   .event-desc {
     font-size: 0.85rem;
-    color: var(--fog);
+    color: var(--text-light);
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
@@ -556,18 +562,18 @@
     font-size: 0.65rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--vine);
+    color: var(--barrel-dk);
     text-decoration: none;
     border-bottom: 1px solid rgba(193,127,58,0.4);
     padding-bottom: 2px;
     transition: color 0.2s, border-color 0.2s;
   }
 
-  .event-link:hover { color: var(--gold); border-color: var(--gold); }
+  .event-link:hover { color: var(--barrel-lt); border-color: var(--barrel-lt); }
 
   /* ── VISIT ── */
   .visit-section {
-    background: var(--parchment);
+    background: var(--bg);
     border-top: 1px solid rgba(193,127,58,0.1);
     padding: 7rem 3rem;
   }
@@ -584,12 +590,12 @@
   .visit-info h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 3vw, 3rem);
-    color: var(--bark);
+    color: var(--text);
     margin-bottom: 2rem;
     line-height: 1.1;
   }
 
-  .visit-info h2 em { font-style: italic; color: var(--gold); }
+  .visit-info h2 em { font-style: italic; color: var(--barrel-lt); }
 
   .info-block {
     margin-bottom: 2rem;
@@ -604,7 +610,7 @@
     font-size: 0.6rem;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: var(--vine);
+    color: var(--barrel-dk);
     margin-bottom: 0.6rem;
     display: block;
   }
@@ -621,11 +627,11 @@
     gap: 0.3rem 1.5rem;
   }
 
-  .hours-day { color: var(--fog); font-size: 0.85rem; }
+  .hours-day { color: var(--text-light); font-size: 0.85rem; }
   .hours-time { color: var(--cream); font-size: 0.85rem; text-align: right; }
 
   .visit-map {
-    background: var(--dark);
+    background: var(--bg2);
     border: 1px solid rgba(193,127,58,0.2);
     height: 400px;
     display: flex;
@@ -674,7 +680,7 @@
   }
 
   .map-placeholder small {
-    color: var(--fog);
+    color: var(--text-light);
     font-size: 0.75rem;
   }
 
@@ -708,7 +714,7 @@
     width: 280px;
     height: 280px;
     flex-shrink: 0;
-    background: var(--parchment);
+    background: var(--bg);
     border-right: 1px solid rgba(193,127,58,0.1);
     display: flex;
     flex-direction: column;
@@ -731,7 +737,7 @@
   .insta-caption {
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
-    color: var(--bark);
+    color: var(--text);
     position: relative;
     z-index: 1;
     font-style: italic;
@@ -740,7 +746,7 @@
 
   /* ── FOOTER ── */
   footer {
-    background: var(--dark);
+    background: var(--bg2);
     border-top: 1px solid rgba(193,127,58,0.15);
     padding: 4rem 3rem 2rem;
   }
@@ -763,14 +769,14 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 900;
-    color: var(--gold);
+    color: var(--barrel-lt);
     margin-bottom: 1rem;
     display: block;
     font-style: italic;
   }
 
   .footer-tagline {
-    color: var(--fog);
+    color: var(--text-light);
     font-size: 0.88rem;
     line-height: 1.7;
     max-width: 280px;
@@ -781,7 +787,7 @@
     font-size: 0.6rem;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: var(--vine);
+    color: var(--barrel-dk);
     margin-bottom: 1.2rem;
   }
 
@@ -792,7 +798,7 @@
   }
 
   .footer-col a {
-    color: var(--fog);
+    color: var(--text-light);
     text-decoration: none;
     font-size: 0.88rem;
     transition: color 0.2s;
@@ -804,7 +810,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--fog);
+    color: var(--text-light);
     font-size: 0.75rem;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 0.1em;
@@ -816,7 +822,7 @@
   }
 
   .social-links a {
-    color: var(--fog);
+    color: var(--text-light);
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     font-size: 0.65rem;
@@ -825,7 +831,7 @@
     transition: color 0.2s;
   }
 
-  .social-links a:hover { color: var(--gold); }
+  .social-links a:hover { color: var(--barrel-lt); }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
